@@ -1,0 +1,35 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <AssemblyName>ZeroParades.LanguageToggle</AssemblyName>
+    <RootNamespace>ZeroParades.LanguageToggle</RootNamespace>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <CopyLocalLockFileAssemblies>false</CopyLocalLockFileAssemblies>
+    <GameRoot Condition="'$(GameRoot)' == ''">C:\Program Files (x86)\Steam\steamapps\common\Zero Parades</GameRoot>
+    <BepInExCorePath Condition="'$(BepInExCorePath)' == ''">$(GameRoot)\BepInEx\core</BepInExCorePath>
+    <GameInteropPath Condition="'$(GameInteropPath)' == ''">$(GameRoot)\BepInEx\interop</GameInteropPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="src\**\*.cs" />
+
+    <Reference Include="BepInEx.Core" HintPath="$(BepInExCorePath)\BepInEx.Core.dll" Private="false" />
+    <Reference Include="BepInEx.Unity.IL2CPP" HintPath="$(BepInExCorePath)\BepInEx.Unity.IL2CPP.dll" Private="false" />
+    <Reference Include="Il2CppInterop.Runtime" HintPath="$(BepInExCorePath)\Il2CppInterop.Runtime.dll" Private="false" />
+
+    <Reference Include="Il2CppDummyDll" HintPath="$(GameInteropPath)\Il2CppDummyDll.dll" Private="false"
+               Condition="Exists('$(GameInteropPath)\Il2CppDummyDll.dll')" />
+    <Reference Include="Il2Cppmscorlib" HintPath="$(GameInteropPath)\Il2Cppmscorlib.dll" Private="false"
+               Condition="Exists('$(GameInteropPath)\Il2Cppmscorlib.dll')" />
+    <Reference Include="UnityEngine.CoreModule" HintPath="$(GameInteropPath)\UnityEngine.CoreModule.dll" Private="false" />
+    <Reference Include="UnityEngine.IMGUIModule" HintPath="$(GameInteropPath)\UnityEngine.IMGUIModule.dll" Private="false" />
+    <Reference Include="UnityEngine.InputLegacyModule" HintPath="$(GameInteropPath)\UnityEngine.InputLegacyModule.dll" Private="false" />
+    <Reference Include="Assembly-CSharp" HintPath="$(GameInteropPath)\Assembly-CSharp.dll" Private="false" />
+    <Reference Include="ZAUM.C4.Common" HintPath="$(GameInteropPath)\ZAUM.C4.Common.dll" Private="false" />
+    <Reference Include="ZAUM.FELD" HintPath="$(GameInteropPath)\ZAUM.FELD.dll" Private="false" />
+  </ItemGroup>
+</Project>

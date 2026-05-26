@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <OutputType>WinExe</OutputType>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <LangVersion>latest</LangVersion>
+    <RootNamespace>ZeroParades.LanguageToggle.Setup</RootNamespace>
+    <AssemblyName>ZeroParades.LanguageToggle.Setup</AssemblyName>
+    <RuntimeIdentifier>win-x64</RuntimeIdentifier>
+    <SelfContained>true</SelfContained>
+    <PublishSingleFile>true</PublishSingleFile>
+    <PublishTrimmed>false</PublishTrimmed>
+    <IncludeNativeLibrariesForSelfExtract>true</IncludeNativeLibrariesForSelfExtract>
+    <DebugType>none</DebugType>
+    <DebugSymbols>false</DebugSymbols>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Assets\BepInEx-Unity.IL2CPP-win-x64-6.0.0-be.755+3fab71a.zip"
+                      LogicalName="Payloads.BepInEx.zip" />
+    <EmbeddedResource Include="..\..\bin\Release\ZeroParades.LanguageToggle.dll"
+                      LogicalName="Payloads.ZeroParades.LanguageToggle.dll" />
+    <EmbeddedResource Include="Assets\THIRD-PARTY-NOTICES.md"
+                      LogicalName="Payloads.ThirdPartyNotices.md" />
+    <EmbeddedResource Include="Assets\BepInEx-LICENSE.txt"
+                      LogicalName="Payloads.BepInEx.LICENSE.txt" />
+  </ItemGroup>
+</Project>

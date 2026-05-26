@@ -1,0 +1,17 @@
+# Build output
+bin/
+obj/
+dist/
+**/bin/
+**/obj/
+
+# Downloaded redistribution payload embedded at publish time
+installer/ZeroParades.LanguageToggle.Setup/Assets/*.zip
+
+# IDE and local files
+.vs/
+.vscode/
+*.user
+*.suo
+*.log
+Thumbs.db
