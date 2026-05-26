@@ -23,9 +23,7 @@
 
 ### 校验
 
-```text
-SHA-256: 66BB340005D8BF8586543F060322BB56ECD7FAF4DCC036EEB352B72F88F36DF1
-```
+请使用同一 Release 中的 `SHA256SUMS.txt` 校验全部下载附件。
 
 ## English
 
@@ -48,10 +46,8 @@ Download and run `ZeroParades.LanguageToggle.Setup.exe`, select the game directo
 
 ### Verification
 
-```text
-SHA-256: 66BB340005D8BF8586543F060322BB56ECD7FAF4DCC036EEB352B72F88F36DF1
-```
+Use `SHA256SUMS.txt` from the same Release to verify all downloaded assets.
 
 ## Third-Party Component
 
-The installer embeds BepInEx under the GNU Lesser General Public License version 2.1. This Release includes `THIRD-PARTY-NOTICES.md` and `BepInEx-LICENSE.txt`.
+The installer embeds BepInEx under the GNU Lesser General Public License version 2.1. This Release includes `THIRD-PARTY-NOTICES.md`, `BepInEx-LICENSE.txt`, and the corresponding BepInEx source archive.

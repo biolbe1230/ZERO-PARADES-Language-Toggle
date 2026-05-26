@@ -159,13 +159,9 @@ installer\ZeroParades.LanguageToggle.Setup\Assets\BepInEx-LICENSE.txt
 
 ## 发布校验
 
-`v0.2.2` 安装包的 SHA-256：
+请使用 Release 附件中的 `SHA256SUMS.txt` 校验安装包与第三方分发附件。
 
-```text
-66BB340005D8BF8586543F060322BB56ECD7FAF4DCC036EEB352B72F88F36DF1
-```
-
-Release 页面同时提供 `SHA256SUMS.txt`、`THIRD-PARTY-NOTICES.md` 与 `BepInEx-LICENSE.txt`。
+Release 页面同时提供 `THIRD-PARTY-NOTICES.md`、`BepInEx-LICENSE.txt` 与对应的 BepInEx 源码归档。
 
 ## 常见问题
 

@@ -11,5 +11,7 @@ This installer redistributes BepInEx to load the `ZeroParades.LanguageToggle` pl
 - Official download: <https://builds.bepinex.dev/projects/bepinex_be/755/BepInEx-Unity.IL2CPP-win-x64-6.0.0-be.755%2B3fab71a.zip>
 - SHA-256: `3616D6A67F5F595973EC4AA7BD7EDAF7F799D5BB9926F7146A6DCC7B4ABF478F`
 - License: GNU Lesser General Public License version 2.1; the official license text is included as `BepInEx-LICENSE.txt`.
+- Corresponding source archive included with the Release: `BepInEx-source-3fab71a1914132a1ce3a545caf3192da603f2258.zip`
+- Source archive SHA-256: `12781A0A4564E99F8B31F290C28199CE30F81AA2A236991A4A7DF4111AC0D45C`
 
 The installer preserves an existing complete BepInEx IL2CPP installation and only supplies this package when BepInEx is absent.

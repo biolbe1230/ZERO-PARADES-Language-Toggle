@@ -134,13 +134,9 @@ BepInEx is distributed under the GNU Lesser General Public License version 2.1.
 
 ## Release Verification
 
-SHA-256 for the `v0.2.2` installer:
+Use the `SHA256SUMS.txt` Release asset to verify the installer and redistributed third-party files.
 
-```text
-66BB340005D8BF8586543F060322BB56ECD7FAF4DCC036EEB352B72F88F36DF1
-```
-
-The Release also provides `SHA256SUMS.txt`, `THIRD-PARTY-NOTICES.md`, and `BepInEx-LICENSE.txt`.
+The Release also provides `THIRD-PARTY-NOTICES.md`, `BepInEx-LICENSE.txt`, and the corresponding BepInEx source archive.
 
 ## Troubleshooting
 
