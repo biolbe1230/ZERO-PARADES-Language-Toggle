@@ -15,7 +15,14 @@ $archiveHash = '3616D6A67F5F595973EC4AA7BD7EDAF7F799D5BB9926F7146A6DCC7B4ABF478F
 $publishPath = Join-Path $projectRoot 'installer\ZeroParades.LanguageToggle.Setup\bin\Release\net8.0-windows\win-x64\publish'
 $distPath = Join-Path $projectRoot 'dist'
 $distExecutable = Join-Path $distPath 'ZeroParades.LanguageToggle.Setup.exe'
+$distChecksums = Join-Path $distPath 'SHA256SUMS.txt'
+$distReleaseNotes = Join-Path $distPath 'RELEASE_NOTES_v0.2.2.md'
+$distThirdPartyNotices = Join-Path $distPath 'THIRD-PARTY-NOTICES.md'
+$distBepInExLicense = Join-Path $distPath 'BepInEx-LICENSE.txt'
 $pluginUiTest = Join-Path $projectRoot 'tests\verify-plugin-settings-ui.ps1'
+$releaseNotes = Join-Path $projectRoot 'RELEASE_NOTES_v0.2.2.md'
+$thirdPartyNotices = Join-Path $assetsDirectory 'THIRD-PARTY-NOTICES.md'
+$bepInExLicense = Join-Path $assetsDirectory 'BepInEx-LICENSE.txt'
 
 function Invoke-DotNet {
     param([string[]]$Arguments)
@@ -59,7 +66,13 @@ if (Test-Path -LiteralPath $distPath) {
 
 New-Item -ItemType Directory -Force -Path $distPath | Out-Null
 Copy-Item -LiteralPath (Join-Path $publishPath 'ZeroParades.LanguageToggle.Setup.exe') -Destination $distExecutable
+Copy-Item -LiteralPath $releaseNotes -Destination $distReleaseNotes
+Copy-Item -LiteralPath $thirdPartyNotices -Destination $distThirdPartyNotices
+Copy-Item -LiteralPath $bepInExLicense -Destination $distBepInExLicense
 
 $output = Get-Item -LiteralPath $distExecutable
+$outputHash = (Get-FileHash -Algorithm SHA256 -LiteralPath $distExecutable).Hash
+Set-Content -LiteralPath $distChecksums -Encoding ASCII -Value "$outputHash  $($output.Name)"
 Write-Host "Installer ready: $($output.FullName)"
 Write-Host "Installer bytes: $($output.Length)"
+Write-Host "Release assets ready: $distPath"
